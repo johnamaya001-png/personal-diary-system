@@ -1,6 +1,5 @@
 FILE_NAME = "log.txt"
 
-# STUDENT A - create file
 def create_file():
     try:
         with open(FILE_NAME, "x") as file:
@@ -8,21 +7,18 @@ def create_file():
     except FileExistsError:
         print("File already exists.")
 
-# STUDENT A - write initial data
 def write_initial_data():
     data = input("Enter initial data: ")
     with open(FILE_NAME, "w") as file:
         file.write(data + "\n")
     print("Initial data written.")
 
-# STUDENT B - append data
 def append_data():
     data = input("Enter data to append: ")
     with open(FILE_NAME, "a") as file:
         file.write(data + "\n")
     print("Data appended.")
 
-# STUDENT C - read and count lines
 def read_file():
     try:
         with open(FILE_NAME, "r") as file:
@@ -133,6 +129,5 @@ def main():
             break
         else:
             print("Invalid choice.")
-
 # Run program
 main()
